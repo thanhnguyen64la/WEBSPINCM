@@ -15,7 +15,7 @@ function base_url($url = '')
 {
     $server = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER["HTTP_HOST"];
     if ($server == "http://localhost") {
-        $server = "http://localhost/DOANWEB";
+        $server = "http://localhost/WEBSPINCM";
     }
     return $server . "/" . $url;
 }
@@ -23,7 +23,7 @@ function client_url($url = '')
 {
     $server = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER["HTTP_HOST"];
     if ($server == "http://localhost") {
-        $server = "http://localhost/DOANWEB";
+        $server = "http://localhost/WEBSPINCM";
     }
     return $server . "/?module=client&action=" . $url;
 }
@@ -31,7 +31,7 @@ function admin_url($url = '')
 {
     $server = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER["HTTP_HOST"];
     if ($server == "http://localhost") {
-        $server = "http://localhost/DOANWEB";
+        $server = "http://localhost/WEBSPINCM";
     }
     return $server . "/?module=admin&action=" . $url;
 }
