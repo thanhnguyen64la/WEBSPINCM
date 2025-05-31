@@ -2,7 +2,7 @@ Cách chạy code
 
 --Chạy trên loacalhost
 
-Bước 1: git clone code về ../xampp/htdocs/DOANWEB
+Bước 1: git clone code về ../xampp/htdocs/WEBSPINCM (đã set mặc định thư mục loacalhost là WEBSPINCM, nếu tên thư mục khác thì vào libs /Function.php sửa 3 function đầu tiên thành tên thư mục bạn đặt)
 
 Bước 2: Tải database trong folder database
 
