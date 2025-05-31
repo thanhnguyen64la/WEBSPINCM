@@ -1,0 +1,32 @@
+<div class="header-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-5">
+                <div class="header-top-welcome">
+                    <p>
+                        <?= $HN->setting("notification_top_left"); ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-5 col-lg-3">
+                <div class="header-top-select">
+                    <div class="header-select">
+                        <i class="icofont-world"></i>
+                        <div class="gtranslate_wrapper"></div>
+                    </div>
+                    <div class="header-select">
+                        <i class="icofont-money"></i>
+                        <select class="select" id="changeCurrency" onchange="change_currency()">
+                            <?php foreach ($HN->get_list("SELECT * FROM `currencies` WHERE `currency_status` = 'on' ") as $currency): ?>
+                            <option value="<?= $currency[" id"]; ?>"
+                                <?= get_currency() == $currency["id"] ? "selected" : ""; ?>>
+                                <?= $currency["currency_code"]; ?>
+                            </option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

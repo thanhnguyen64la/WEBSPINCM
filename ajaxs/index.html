@@ -1,0 +1,109 @@
+<div class="content-page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">LỊCH SỬ HOA HỒNG</h5>
+                    </div>
+                    <hr>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="datatable" class="table table-hover table-bordered display nowrap"
+                                style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th with="10%"><small><b>MÃ GIAO DỊCH</b></small></th>
+                                        <th width="20%"><small><b>KHÁCH HÀNG</b></small></th>
+                                        <th width="30%"><small><b>THÔNG TIN RÚT</b></small></th>
+                                        <th width="10%"><small><b>SỐ TIỀN</b></small></th>
+                                        <th width="10%"><small><b>TRẠNG THÁI</b></small></th>
+                                        <th width="10%"><small><b>THỜI GIAN</b></small></th>
+                                        <th width="10%"><small><b>THAO TÁC</b></small></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Dữ liệu sẽ được hiển thị từ backend -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MODAL -->
+<div class="modal fade" id="ModalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Chỉnh sửa đơn rút tiền</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label>Mã đơn rút tiền</label>
+                        <input class="form-control" type="text" id="trans_id" readonly>
+                        <input type="hidden" id="id">
+                        <input type="hidden" id="user_id">
+                    </div>
+                    <div class="form-group">
+                        <label>Ngân hàng</label>
+                        <input class="form-control" type="text" id="bank" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Số tài khoản</label>
+                        <input class="form-control" type="text" id="stk" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Chủ tài khoản</label>
+                        <input class="form-control" type="text" id="name" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Số tiền rút</label>
+                        <input class="form-control" type="text" id="amount" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Trạng thái</label>
+                        <select class="form-control" id="status" required>
+                            <option value="1">Hoàn tất</option>
+                            <option value="0">Chờ xử lý</option>
+                            <option value="2">Huỷ (hoàn tiền)</option>
+                            <option value="3">Xử lí tiếp</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Lý do</label>
+                        <textarea class="form-control" rows="4" placeholder="Nhập lý do huỷ đơn rút nếu có"
+                            id="reason"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+                        <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $('.btnEdit').on('click', function () {
+        var btn = $(this);
+        $("#name").val(btn.attr("data-name"));
+        $("#bank").val(btn.attr("data-bank"));
+        $("#stk").val(btn.attr("data-stk"));
+        $("#amount").val(btn.attr("data-amount"));
+        $("#status").val(btn.attr("data-status"));
+        $("#id").val(btn.attr("data-id"));
+        $("#user_id").val(btn.attr("data-user_id"));
+        $("#trans_id").val(btn.attr("data-trans_id"));
+        $("#reason").val(btn.attr("data-reason"));
+        $("#ModalEdit").modal();
+        return false;
+    });
+</script>

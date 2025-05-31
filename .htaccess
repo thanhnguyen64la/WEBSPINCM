@@ -1,0 +1,23 @@
+RewriteEngine On
+
+<Files .env>
+    Order allow,deny
+    deny from all
+</Files>
+
+# HANDLE ROUTE CLIENT
+RewriteRule ^api/order_service ajaxs/client/create.php [L]
+RewriteRule ^blog/([A-Za-z0-9-]+) index.php?module=client&action=blog&slug=$1 [L]
+RewriteRule ^join/([A-Za-z0-9-]+) index.php?module=client&action=referral&ref=$1 [L]
+RewriteRule ^client/([A-Za-z0-9-]+) index.php?module=client&action=$1 [L]
+RewriteRule ^client index.php?module=client&action=home [L]
+
+# HANDLE ROUTE ADMIN
+RewriteRule ^admin/([A-Za-z0-9-]+) index.php?module=admin&action=$1 [L]
+RewriteRule ^admin$ index.php?module=admin&action=home [L]
+
+# HANDLE ROUTE COMMON
+RewriteRule ^common/([A-Za-z0-9-]+) index.php?module=common&action=$1 [L]
+
+php_value upload_max_filesize 20M
+php_value post_max_size 20M
