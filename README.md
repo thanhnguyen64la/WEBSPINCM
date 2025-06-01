@@ -1,27 +1,38 @@
-Cách chạy code
+# Cách chạy code
 
---Chạy trên loacalhost
+## Chạy trên localhost
 
-Bước 1: git clone code về ../xampp/htdocs/WEBSPINCM (đã set mặc định thư mục loacalhost là WEBSPINCM, nếu tên thư mục khác thì vào libs /Function.php sửa 3 function đầu tiên thành tên thư mục bạn đặt)
+1. **Git clone code** về: `../xampp/htdocs/WEBSPINCM`  
+   *(Đã đặt mặc định thư mục localhost là `WEBSPINCM`. Nếu bạn đặt tên khác, hãy vào `libs/Function.php` và sửa 3 function đầu tiên thành tên thư mục bạn đặt)*
 
-Bước 2: Tải database trong folder database
+2. **Tải database** từ thư mục `database`
 
-Bước 3: Tạo cơ sở dữ liệu trên phpmyadmin
+3. **Tạo cơ sở dữ liệu** trên phpMyAdmin
 
-Bước 4: Vào file .env chỉnh sửa các thông tin kết nối đã tạo trước đó
+4. **Chỉnh sửa file `.env`** với các thông tin kết nối đã tạo trước đó
 
-Bước 5: Chạy dự án
+5. **Chạy dự án** trên trình duyệt
 
---Chạy trên hosting
+---
 
-Bước 1: Tải code về, upload code + database vào hosting
+## Chạy trên hosting
 
-Bước 2: Với những hosting hỗ trợ version php thấp, vào cPanel của hosting để chỉnh lên version 8.2
+1. **Tải code**, sau đó upload code và database lên hosting
 
-Bước 3: Chỉnh sửa thông tin kết nối trong file .env
+2. Với những hosting có PHP version thấp, **vào cPanel để nâng cấp lên PHP 8.2**
 
---Tài khoản admin login website demo:
+3. **Chỉnh sửa file `.env`** để cập nhật thông tin kết nối hosting
 
-Tài khoản: adminnguyen
+---
 
-Mật khẩu: nguyen36123
+## Lấy thông tin dịch vụ
+
+- **Thông tin nạp tiền (Auto Bank):** `domain/cron/bank.php`  
+- **Thông tin dịch vụ API:** `domain/cron/spin.php`
+
+---
+
+## Tài khoản admin login website demo
+
+- **Tài khoản:** `adminnguyen`  
+- **Mật khẩu:** `nguyen36123`
