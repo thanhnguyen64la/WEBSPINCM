@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['SaveSettings'])) {
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label" for="money_api_muaspin"><b>Thời gian:</b></label>
+                                <label class="col-sm-3 col-form-label" for="money_api_muaspin"><b>Số dư API:</b></label>
                                 <div class="col-sm-12">
                                     <input disabled type="text" class="form-control" id="money_api_muaspin"
                                         value="<?= format_currency($HN->setting("money_api_muaspin")); ?>"

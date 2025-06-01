@@ -104,7 +104,6 @@ foreach ($HN->get_list(" SELECT * FROM `banks` WHERE `status` = 'on' ") as $bank
                         if ($insertBank) {
                             $isPlus = $USER->plus_money($user["id"], $received, "Nạp tiền tự động qua " . $bank["short_name"] . " (#" . $tid . " - " . $description . " - " . $amount . ")");
                             if ($isPlus) {
-
                                 echo '[<b style="color:green">-</b>] Xử lý thành công 1 hoá đơn.' . PHP_EOL;
                             }
                         }
